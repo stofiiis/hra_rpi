@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <title>LAN Tag</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="ui">
+      <h1>LAN Tag</h1>
+      <div class="row">
+        <input id="name" placeholder="Your name" maxlength="20"/>
+        <button id="setName">Set</button>
+        <span id="meInfo"></span>
+      </div>
+      <p class="hint">Keyboard: WASD / arrows, hold Space for boost. On mobile: touch joystick & boost.</p>
+    </div>
+
+    <canvas id="game" width="1200" height="700"></canvas>
+
+    <div id="touch">
+      <div id="stick"></div>
+      <button id="boost">BOOST</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>

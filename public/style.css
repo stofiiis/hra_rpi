@@ -1,0 +1,57 @@
+/* public/style.css */
+:root {
+  --bg: #0b1020;
+  --fg: #e8ecff;
+  --accent: #7ea2ff;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  overflow: hidden;
+}
+#ui {
+  position: absolute; left: 12px; top: 12px; z-index: 10;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 10px 12px;
+  backdrop-filter: blur(6px);
+}
+#ui h1 { margin: 0 0 6px 0; font-size: 20px; }
+#ui .row { display: flex; gap: 8px; align-items: center; }
+#ui input {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--fg);
+  padding: 6px 8px; border-radius: 8px;
+}
+#ui button {
+  background: var(--accent);
+  border: none; color: #08112c; padding: 6px 10px; border-radius: 8px;
+  font-weight: 700;
+}
+#ui .hint { margin: 6px 0 0 0; opacity: 0.8; }
+
+canvas#game {
+  width: 100vw; height: 100vh;
+}
+
+#touch {
+  position: fixed; left: 10px; bottom: 10px; width: 140px; height: 140px;
+  border-radius: 50%; border: 2px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+}
+#stick {
+  position: absolute; width: 50px; height: 50px; border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  left: 45px; top: 75px;
+}
+#boost {
+  position: fixed; right: 10px; bottom: 10px; width: 120px; height: 60px;
+  border-radius: 12px; border: 2px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.15);
+  color: var(--fg); font-weight: 800; letter-spacing: 1px;
+}
