@@ -1,0 +1,17 @@
+{
+  "name": "rpi-multiplayer-racing",
+  "version": "1.0.0",
+  "description": "LAN/Internet multiplayer top-down racing game for Raspberry Pi using Node.js and Socket.IO",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "compression": "^1.7.4",
+    "helmet": "^7.0.0",
+    "cors": "^2.8.5"
+  }
+}

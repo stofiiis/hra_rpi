@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <title>LAN Racing</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div id="hud" class="panel">
+      <div class="row">
+        <h1>LAN Racing</h1>
+        <div class="spacer"></div>
+        <button id="btnStart">START</button>
+        <button id="btnReset">RESET</button>
+      </div>
+      <div class="row small">
+        <input id="name" placeholder="Your name" maxlength="20"/>
+        <button id="btnName">Set</button>
+        <span id="info"></span>
+      </div>
+      <div class="row small">
+        <span id="raceInfo"></span>
+      </div>
+      <div id="leaderboard"></div>
+    </div>
+
+    <canvas id="game"></canvas>
+
+    <!-- Touch controls -->
+    <div id="touch">
+      <div id="joyBase"></div>
+      <div id="joyKnob"></div>
+      <div id="pedals">
+        <button id="throttle">GO</button>
+        <button id="brake">BRK</button>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>

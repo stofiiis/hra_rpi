@@ -1,0 +1,35 @@
+/* public/style.css */
+:root {
+  --bg: #0a0e1a;
+  --panel: rgba(0,0,0,0.4);
+  --text: #e9ecff;
+  --accent: #7ea2ff;
+  --accent2: #a5ff7e;
+}
+*{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; height:100%; overflow:hidden; }
+canvas#game{ width:100vw; height:100vh; display:block; }
+.panel{
+  position:absolute; left:12px; top:12px; z-index:10;
+  background:var(--panel); border:1px solid rgba(255,255,255,0.12);
+  border-radius:14px; padding:10px 12px; backdrop-filter: blur(6px);
+}
+.panel .row{ display:flex; align-items:center; gap:10px; }
+.panel .row.small{ font-size: 14px; opacity:0.9;}
+.panel h1{ margin:0; font-size:20px; }
+.panel button{
+  border:none; background:var(--accent); color:#06122c; padding:6px 10px; border-radius:10px; font-weight:700;
+}
+.panel input{
+  background: rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18);
+  color:var(--text); padding:6px 8px; border-radius:8px;
+}
+#leaderboard{ margin-top:8px; font-size:14px;}
+.spacer{ flex:1; }
+
+/* Touch */
+#touch{ position: fixed; inset: 0; pointer-events: none; }
+#joyBase{ position: absolute; left: 16px; bottom: 16px; width:140px; height:140px; border-radius:50%; border:2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); pointer-events:auto; }
+#joyKnob{ position: absolute; width:52px; height:52px; border-radius:50%; background: rgba(255,255,255,0.5); left: 60px; bottom: 60px; pointer-events:none; }
+#pedals{ position: absolute; right: 16px; bottom: 16px; display:flex; gap:12px; pointer-events:auto; }
+#pedals button{ width:120px; height:60px; border-radius:12px; border:2px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.12); color:var(--text); font-weight:800; }
